@@ -1,526 +1,292 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4689cc; -webkit-text-stroke: #4689cc}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #c27e65; -webkit-text-stroke: #c27e65}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #8cd3fe; -webkit-text-stroke: #8cd3fe}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d7378; -webkit-text-stroke: #6d7378}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #a7c598; -webkit-text-stroke: #a7c598}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca; min-height: 16.0px}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #71c083; -webkit-text-stroke: #71c083}
-    span.s1 {font-kerning: none; background-color: #171818}
-    span.s2 {font-kerning: none; color: #8cd3fe; background-color: #171818; -webkit-text-stroke: 0px #8cd3fe}
-    span.s3 {font-kerning: none; color: #6d6d6d; background-color: #171818; -webkit-text-stroke: 0px #6d6d6d}
-    span.s4 {font-kerning: none; color: #4689cc; background-color: #171818; -webkit-text-stroke: 0px #4689cc}
-    span.s5 {font-kerning: none; color: #cacaca; background-color: #171818; -webkit-text-stroke: 0px #cacaca}
-    span.s6 {font-kerning: none; color: #c27e65; background-color: #171818; -webkit-text-stroke: 0px #c27e65}
-    span.s7 {font-kerning: none; color: #d4d4d4; background-color: #171818; -webkit-text-stroke: 0px #d4d4d4}
-    span.s8 {font-kerning: none; color: #71c083; background-color: #171818; -webkit-text-stroke: 0px #71c083}
-    span.s9 {font-kerning: none; color: #a7c598; background-color: #171818; -webkit-text-stroke: 0px #a7c598}
-    span.s10 {font-kerning: none}
-    span.s11 {font-kerning: none; color: #b76ff7; background-color: #171818; -webkit-text-stroke: 0px #b76ff7}
-    span.s12 {font-kerning: none; color: #36c0a0; background-color: #171818; -webkit-text-stroke: 0px #36c0a0}
-    span.s13 {font-kerning: none; color: #f67c30; background-color: #171818; -webkit-text-stroke: 0px #f67c30}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía Interactiva: Propuesta de Valor WAU</title>
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <script src="[https://cdn.jsdelivr.net/npm/chart.js](https://cdn.jsdelivr.net/npm/chart.js)"></script>
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap)" rel="stylesheet">
+    <!-- Visualization & Content Choices: 
+        - 3 Ejes (Estrategia, Ventas, Comunicación): Goal: Organizar/Comparar. Viz/Presentation Method: Gráfico de Donut. Interaction: Tooltips al pasar el ratón. Justification: Representa visualmente cómo 3 partes forman un todo sistémico, lo cual es central en la propuesta de WAU. Library/Method: Chart.js (Canvas).
+        - Método de Intervención (4 Fases): Goal: Organizar/Mostrar Proceso. Viz/Presentation Method: Diagrama de Flujo Horizontal con tarjetas. Interaction: Sutil efecto de hover en las tarjetas. Justification: Un diagrama de flujo es la forma más intuitiva de mostrar un proceso secuencial en el tiempo. Library/Method: HTML/CSS con Tailwind (Flexbox).
+        - Diferenciales: Goal: Informar. Viz/Presentation Method: Tarjetas de íconos. Interaction: Ninguna. Justification: Las tarjetas con íconos (Unicode) permiten una digestión rápida de los puntos clave de venta. Library/Method: HTML/CSS con Tailwind.
+        - Herramientas y Frameworks: Goal: Informar/Demostrar Profundidad. Viz/Presentation Method: Gráfico de Burbujas. Interaction: Tooltips. Justification: Una nube de burbujas es más dinámica y visualmente atractiva que una larga lista, transmitiendo la amplitud de su experiencia. Se aplicará el ajuste de texto para etiquetas largas. Library/Method: Chart.js (Canvas).
+        - Problemas que Resuelven: Goal: Informar. Viz/Presentation Method: Lista destacada. Interaction: Ninguna. Justification: Una lista clara y directa comunica eficazmente los puntos de dolor que la empresa aborda. Library/Method: HTML/CSS con Tailwind.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 500px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .brand-text-dark { color: #073B4C; }
+        .brand-text-blue { color: #118AB2; }
+        .brand-bg-blue { background-color: #118AB2; }
+        .brand-bg-green { background-color: #06D6A0; }
+        .brand-bg-yellow { background-color: #FFD166; }
+        .brand-bg-red { background-color: #FF6B6B; }
+        .brand-text-light { color: #f8f9fa; }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">html</span><span class="s5"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s1">"es"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"scroll-smooth"</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s6">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s5"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">title</span><span class="s3">&gt;</span><span class="s1">Estrategia de Marca Personal Interactiva</span><span class="s3">&lt;/</span><span class="s4">title</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.jsdelivr.net/npm/chart.js"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">link</span><span class="s5"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"preconnect"</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">link</span><span class="s5"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"preconnect"</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.gstatic.com"</span><span class="s5"> </span><span class="s2">crossorigin</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">link</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"</span><span class="s5"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Visualization &amp; Content Choices:<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>- Report Info: PVD, Audience, Key Messages, Tone. Goal: Inform/Organize. Viz/Presentation: Structured HTML cards and lists. Interaction: None/subtle hover. Justification: Provides clear, scannable information for foundational concepts. Library/Method: HTML/Tailwind.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>- Report Info: Content Types. Goal: Organize/Compare. Viz/Presentation: A filterable gallery of cards. Interaction: User clicks buttons to filter content by category. Justification: Allows easy exploration of specific content ideas without overwhelming the user. Library/Method: Vanilla JS DOM manipulation.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>- Report Info: Metrics. Goal: Compare/Change over time. Viz/Presentation: A dashboard with Doughnut and Bar charts. Interaction: Tooltips on hover to show data points. Justification: Translates abstract metrics into tangible, easy-to-understand visuals, highlighting performance areas. Library/Method: Chart.js (Canvas).</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>- Report Info: Action Plan/Roadmap. Goal: Organize. Viz/Presentation: A timeline/step-by-step diagram. Interaction: Hover effects to highlight steps. Justification: Visualizes the implementation process, making it feel more manageable and actionable. Library/Method: HTML/Tailwind. --&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">body</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s8">'Inter'</span><span class="s7">,</span><span class="s1"> </span><span class="s6">sans-serif</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #F8F7F4</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> #3D405B</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.nav-link</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s1"> </span><span class="s6">all</span><span class="s1"> </span><span class="s9">0.2s</span><span class="s1"> </span><span class="s6">ease-in-out</span><span class="s7">;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">border-left:</span><span class="s5"> </span><span class="s9">3px</span><span class="s5"> </span><span class="s1">solid</span><span class="s5"> </span><span class="s1">transparent</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.nav-link.active</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-left-color:</span><span class="s1"> #81B29A</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #E0EFEA</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> #3D405B</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s6">translateX(</span><span class="s9">4px</span><span class="s6">)</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.nav-link:hover</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-left-color:</span><span class="s1"> #81B29A</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #E0EFEA</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s6">translateX(</span><span class="s9">4px</span><span class="s6">)</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.content-card</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #ffffff</span><span class="s7">;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">border-radius:</span><span class="s5"> </span><span class="s9">0.75rem</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border:</span><span class="s1"> </span><span class="s9">1px</span><span class="s1"> </span><span class="s6">solid</span><span class="s1"> #E5E7EB</span><span class="s7">;</span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow:</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">4px</span><span class="s5"> </span><span class="s1">6px</span><span class="s5"> </span><span class="s1">-1px</span><span class="s5"> </span><span class="s6">rgb(</span><span class="s1">0</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s7">/</span><span class="s5"> </span><span class="s1">0.05</span><span class="s6">)</span><span class="s7">,</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">2px</span><span class="s5"> </span><span class="s1">4px</span><span class="s5"> </span><span class="s1">-2px</span><span class="s5"> </span><span class="s6">rgb(</span><span class="s1">0</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s7">/</span><span class="s5"> </span><span class="s1">0.05</span><span class="s6">)</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s1"> </span><span class="s6">all</span><span class="s1"> </span><span class="s9">0.3s</span><span class="s1"> </span><span class="s6">ease-in-out</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.content-card:hover</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s6">translateY(</span><span class="s9">-4px</span><span class="s6">)</span><span class="s7">;</span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow:</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">10px</span><span class="s5"> </span><span class="s1">15px</span><span class="s5"> </span><span class="s1">-3px</span><span class="s5"> </span><span class="s6">rgb(</span><span class="s1">0</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s7">/</span><span class="s5"> </span><span class="s1">0.07</span><span class="s6">)</span><span class="s7">,</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">4px</span><span class="s5"> </span><span class="s1">6px</span><span class="s5"> </span><span class="s1">-4px</span><span class="s5"> </span><span class="s6">rgb(</span><span class="s1">0</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s1">0</span><span class="s5"> </span><span class="s7">/</span><span class="s5"> </span><span class="s1">0.07</span><span class="s6">)</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.chart-container</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s6">relative</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width:</span><span class="s1"> </span><span class="s9">100%</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">max-width:</span><span class="s1"> </span><span class="s9">500px</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-left:</span><span class="s1"> </span><span class="s6">auto</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-right:</span><span class="s1"> </span><span class="s6">auto</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">height:</span><span class="s1"> </span><span class="s9">300px</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">max-height:</span><span class="s1"> </span><span class="s9">400px</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>@</span><span class="s4">media</span><span class="s1"> (</span><span class="s4">min-width:</span><span class="s1"> 768</span><span class="s4">px</span><span class="s1">) </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>.chart-container {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">height:</span><span class="s1"> </span><span class="s9">350px</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.filter-btn</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s1"> </span><span class="s6">all</span><span class="s1"> </span><span class="s9">0.2s</span><span class="s1"> </span><span class="s6">ease-in-out</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.filter-btn.active</span><span class="s5"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #3D405B</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> #FFFFFF</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">body</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col md:flex-row"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">header</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"mobile-header"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"md:hidden sticky top-0 bg-white/80 backdrop-blur-sm z-20 shadow-md p-4 flex justify-between items-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">h1</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg font-bold text-[#3D405B]"</span><span class="s3">&gt;</span><span class="s5">Estrategia de Marca</span><span class="s3">&lt;/</span><span class="s4">h1</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"mobile-menu-btn"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-2"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">svg</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s5"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s5"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s5"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s5"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s4">path</span><span class="s5"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s5"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s5"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s5"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M4 6h16M4 12h16m-4 6h16"</span><span class="s3">&gt;&lt;/</span><span class="s4">path</span><span class="s3">&gt;&lt;/</span><span class="s4">svg</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">header</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">aside</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"sidebar"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fixed top-0 left-0 h-full w-64 bg-white/95 backdrop-blur-sm transform -translate-x-full md:relative md:translate-x-0 md:flex-shrink-0 z-30 md:z-10 transition-transform duration-300 ease-in-out shadow-lg md:shadow-none"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-6"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-bold mb-8 text-[#3D405B]"</span><span class="s3">&gt;</span><span class="s5">Plan de Marca</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">nav</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"main-nav"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col space-y-2"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">nav</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">aside</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">main</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex-1 p-4 sm:p-6 md:p-10"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"content"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto space-y-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s4">main</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>document</span><span class="s7">.</span><span class="s1">addEventListener</span><span class="s7">(</span><span class="s8">'DOMContentLoaded'</span><span class="s7">,</span><span class="s1"> </span><span class="s11">function</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> strategyData </span><span class="s7">=</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>sections</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s1"> id</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'pvd'</span><span class="s7">,</span><span class="s1"> title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'1. Propuesta de Valor'</span><span class="s7">,</span><span class="s1"> icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'🎯'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s1"> id</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'audiencia'</span><span class="s7">,</span><span class="s1"> title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'2. Público Objetivo'</span><span class="s7">,</span><span class="s1"> icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'👥'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s1"> id</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'mensajes'</span><span class="s7">,</span><span class="s1"> title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'3. Mensajes Clave'</span><span class="s7">,</span><span class="s1"> icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'🔑'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s1"> id</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'canales'</span><span class="s7">,</span><span class="s1"> title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'4. Canales Principales'</span><span class="s7">,</span><span class="s1"> icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'📡'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s1"> id</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'contenido'</span><span class="s7">,</span><span class="s1"> title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'5. Tipos de Contenido'</span><span class="s7">,</span><span class="s1"> icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'📝'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s1"> id</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'tono'</span><span class="s7">,</span><span class="s1"> title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'6. Tono y Estilo'</span><span class="s7">,</span><span class="s1"> icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'🎨'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s1"> id</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'networking'</span><span class="s7">,</span><span class="s1"> title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'7. Networking'</span><span class="s7">,</span><span class="s1"> icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'🤝'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s1"> id</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'metricas'</span><span class="s7">,</span><span class="s1"> title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'8. Métricas'</span><span class="s7">,</span><span class="s1"> icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'📊'</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s1"> id</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'roadmap'</span><span class="s7">,</span><span class="s1"> title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'9. Hoja de Ruta'</span><span class="s7">,</span><span class="s1"> icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'🚀'</span><span class="s1"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>pvd</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>intro</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Tu Propuesta de Valor Diferenciadora (PVD) debe encapsular lo que te hace especial al combinar ventas, coaching y tecnología. No eres solo uno de ellos; eres la sinergia de los tres.'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>items</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Enfoque'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Soy el puente que conecta la innovación tecnológica con el máximo rendimiento humano en ventas.'</span><span class="s7">,</span><span class="s5"> color</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'bg-green-100 text-green-800'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Problema que resuelves'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Ayudo a equipos y líderes de ventas a superar la brecha entre las herramientas tecnológicas y la capacidad de sus equipos para adoptarlas eficazmente.'</span><span class="s7">,</span><span class="s5"> color</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'bg-blue-100 text-blue-800'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Beneficio Clave'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Transformo equipos de ventas en máquinas de alto rendimiento, fusionando coaching avanzado con la implementación inteligente de soluciones tecnológicas.'</span><span class="s7">,</span><span class="s5"> color</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'bg-yellow-100 text-yellow-800'</span><span class="s5"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>audiencia</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>intro</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Definir tu audiencia te permite hablarles directamente, abordando sus dolores y aspiraciones.'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>items</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Líderes de Ventas'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Directores Comerciales en empresas de tecnología (SaaS, hardware, IT) preocupados por la eficiencia, escalabilidad y retención de talento.'</span><span class="s7">,</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'🏆'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Emprendedores y Fundadores'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Fundadores de Startups que necesitan escalar sus equipos de ventas y optimizar sus procesos con tecnología de forma ágil.'</span><span class="s7">,</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'💡'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Profesionales de Ventas'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Vendedores individuales que buscan mejorar su rendimiento, adoptar nuevas herramientas y desarrollar habilidades para su carrera.'</span><span class="s7">,</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'🌟'</span><span class="s5"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>mensajes</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>intro</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Estos mensajes deben ser consistentes en toda tu comunicación y reflejar tu PVD.'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>items</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Ventas + Tecnología'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'No se trata solo de vender, sino de vender de forma más inteligente. Te muestro cómo la tecnología adecuada puede liberar el potencial de tu equipo.'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Coaching + Ventas'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'El verdadero éxito en ventas reside en el desarrollo del talento. Mi enfoque empodera a los vendedores para superar barreras y alcanzar su máximo potencial.'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Sinergia Total'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Fusiono la vanguardia tecnológica con el arte del coaching para construir equipos de ventas imparables, capaces de dominar el panorama actual.'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Personalidad'</span><span class="s7">,</span><span class="s5"> content</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Mi misión es inspirar y equipar a profesionales para que transformen sus desafíos en oportunidades de éxito con pasión e innovación.'</span><span class="s5"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>canales</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>intro</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Selecciona los canales donde tu audiencia es más activa y donde puedes mostrar mejor tu experiencia.'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>items</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> name</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'LinkedIn'</span><span class="s7">,</span><span class="s5"> priority</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Alta'</span><span class="s7">,</span><span class="s5"> usage</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Artículos, posts, participación en grupos, LinkedIn Live.'</span><span class="s7">,</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'🔗'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> name</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'YouTube'</span><span class="s7">,</span><span class="s5"> priority</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Media/Alta'</span><span class="s7">,</span><span class="s5"> usage</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Tutoriales, entrevistas, webinars grabados, análisis de tendencias.'</span><span class="s7">,</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'📺'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> name</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Newsletter'</span><span class="s7">,</span><span class="s5"> priority</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Media'</span><span class="s7">,</span><span class="s5"> usage</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Resúmenes, insights exclusivos, invitaciones a eventos.'</span><span class="s7">,</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'✉️'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> name</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Instagram'</span><span class="s7">,</span><span class="s5"> priority</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Baja'</span><span class="s7">,</span><span class="s5"> usage</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Reels con consejos rápidos, infografías, "detrás de cámaras".'</span><span class="s7">,</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'📸'</span><span class="s5"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>contenido</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>intro</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Diversifica tus formatos para mantener el interés y llegar a diferentes preferencias de consumo. Usa los filtros para explorar ideas de contenido.'</span><span class="s7">,</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>filters</span><span class="s7">:</span><span class="s5"> </span><span class="s7">[</span><span class="s1">'Todos'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Video'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Texto'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Visual'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Interactivo'</span><span class="s7">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>items</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> type</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Video'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Videos Cortos (Reels/Shorts)'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'"3 tips para usar CRM", "Un error común en negociación", "Cómo la IA cambia las ventas".'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> type</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Video'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Videos Largos (YouTube)'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'"Guía para implementar Sales Enablement", "Entrevista con Líder Tech", "Análisis del futuro del coaching".'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> type</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Texto'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Artículos de Blog'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'"Las 5 tecnologías disruptivas para vendedores", "Coaching de ventas: más allá de los números", "Casos de éxito".'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> type</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Visual'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Infografías/Carruseles'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Resúmenes visuales de datos, estadísticas o procesos complejos (ej., "Ciclo de Ventas con IA").'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> type</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Texto'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Estudios de Caso'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Historias de cómo ayudaste a un cliente a lograr resultados específicos (anonimizados si es necesario).'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> type</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Interactivo'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Webinars/Masterclasses'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Sesiones interactivas en vivo sobre temas específicos, con Q&amp;A para generar engagement y leads.'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> type</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Interactivo'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Participación en Podcasts'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Como invitado, compartiendo tu expertise para alcanzar nuevas audiencias.'</span><span class="s5"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>tono</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>intro</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Tu tono debe reflejar tu personalidad y profesionalismo de manera coherente.'</span><span class="s7">,</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>adjectives</span><span class="s7">:</span><span class="s5"> </span><span class="s7">[</span><span class="s1">'Educativo'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Inspirador'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Pragmático'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Cercano'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Auténtico'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Orientador'</span><span class="s7">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>style</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Claro y Conciso'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Ve al grano, evita rodeos y comunica ideas de forma directa.'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Visualmente Atractivo'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Utiliza imágenes, gráficos y videos de alta calidad para captar la atención.'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Interactivo'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Haz preguntas, invita a comentarios y fomenta el diálogo para construir comunidad.'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Consistente'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Mantén la misma voz y estética visual en todos tus canales para ser reconocible.'</span><span class="s5"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>networking</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>intro</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Ampliar tu red y colaborar con otros te dará mayor visibilidad y credibilidad.'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>items</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Participación Activa en LinkedIn'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Comenta, únete a grupos y participa en discusiones relevantes.'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Eventos y Conferencias'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Asiste y, si es posible, presenta en eventos de la industria (virtuales o presenciales).'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Colaboraciones Estratégicas'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Co-crea contenido, haz entrevistas cruzadas o participa en podcasts.'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Mentores y Aliados'</span><span class="s7">,</span><span class="s5"> desc</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Busca mentores, aprende de ellos y ofrece tu ayuda a otros para crear una red sólida.'</span><span class="s5"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>metricas</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>intro</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Medir te permitirá saber qué funciona y qué necesitas ajustar. Este es un ejemplo de cómo podrías visualizar tu progreso.'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>charts</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> id</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'engagementChart'</span><span class="s7">,</span><span class="s5"> type</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'doughnut'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Fuentes de Engagement'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> id</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'growthChart'</span><span class="s7">,</span><span class="s5"> type</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'bar'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Crecimiento de Audiencia (Trimestral)'</span><span class="s5"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>roadmap</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>intro</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Construir una marca personal potente es un maratón, no un sprint. Sigue esta hoja de ruta para empezar con buen pie.'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>steps</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> week</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Semana 1'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Fundamentos'</span><span class="s7">,</span><span class="s5"> tasks</span><span class="s7">:</span><span class="s5"> </span><span class="s7">[</span><span class="s1">'Define tu PVD y audiencia.'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Redacta tus mensajes clave.'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Optimiza tus perfiles online.'</span><span class="s7">],</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'🏗️'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> week</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Semana 2'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Contenido Inicial'</span><span class="s7">,</span><span class="s5"> tasks</span><span class="s7">:</span><span class="s5"> </span><span class="s7">[</span><span class="s1">'Crea un calendario de contenido.'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Publica tu primer post y video.'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Empieza a interactuar.'</span><span class="s7">],</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'🎬'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> week</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Mes 1'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Consistencia'</span><span class="s7">,</span><span class="s5"> tasks</span><span class="s7">:</span><span class="s5"> </span><span class="s7">[</span><span class="s1">'Mantén la frecuencia de publicación.'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Interactúa activamente en tu nicho.'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Mide alcance y engagement.'</span><span class="s7">],</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'🔁'</span><span class="s5"> </span><span class="s7">},</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s7">{</span><span class="s5"> week</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Mes 2-3'</span><span class="s7">,</span><span class="s5"> title</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'Expansión'</span><span class="s7">,</span><span class="s5"> tasks</span><span class="s7">:</span><span class="s5"> </span><span class="s7">[</span><span class="s1">'Explora nuevos formatos (webinar).'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Identifica y contacta colaboradores.'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Ajusta la estrategia con métricas.'</span><span class="s7">],</span><span class="s5"> icon</span><span class="s7">:</span><span class="s5"> </span><span class="s1">'📈'</span><span class="s5"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">};</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> mainNav </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'main-nav'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> contentDiv </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content'</span><span class="s7">);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>strategyData</span><span class="s7">.</span><span class="s1">sections</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">section </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> link </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'a'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>link</span><span class="s7">.</span><span class="s1">href </span><span class="s7">=</span><span class="s1"> </span><span class="s8">`#</span><span class="s7">${</span><span class="s1">section</span><span class="s7">.</span><span class="s1">id</span><span class="s7">}</span><span class="s8">`</span><span class="s7">;</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                </span>link</span><span class="s7">.</span><span class="s5">className </span><span class="s7">=</span><span class="s5"> </span><span class="s1">'nav-link block p-3 rounded-md font-medium text-gray-600'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>link</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">=</span><span class="s1"> </span><span class="s8">`&lt;span class="mr-3"&gt;</span><span class="s7">${</span><span class="s1">section</span><span class="s7">.</span><span class="s1">icon</span><span class="s7">}</span><span class="s8">&lt;/span&gt; </span><span class="s7">${</span><span class="s1">section</span><span class="s7">.</span><span class="s1">title</span><span class="s7">}</span><span class="s8">`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>mainNav</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">link</span><span class="s7">);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> sectionContent </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'section'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>sectionContent</span><span class="s7">.</span><span class="s1">id </span><span class="s7">=</span><span class="s1"> section</span><span class="s7">.</span><span class="s1">id</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>sectionContent</span><span class="s7">.</span><span class="s1">className </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'min-h-[60vh]'</span><span class="s7">;</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                </span>sectionContent</span><span class="s7">.</span><span class="s5">innerHTML </span><span class="s7">=</span><span class="s5"> </span><span class="s1">`&lt;h2 class="text-3xl font-bold mb-2 text-[#3D405B]"&gt;</span><span class="s7">${</span><span class="s5">section</span><span class="s7">.</span><span class="s5">title</span><span class="s7">}</span><span class="s1">&lt;/h2&gt;&lt;p class="text-gray-500 mb-8 max-w-3xl"&gt;</span><span class="s7">${</span><span class="s5">strategyData</span><span class="s7">[</span><span class="s5">section</span><span class="s7">.</span><span class="s5">id</span><span class="s7">].</span><span class="s5">intro</span><span class="s7">}</span><span class="s1">&lt;/p&gt;&lt;div id="content-</span><span class="s7">${</span><span class="s5">section</span><span class="s7">.</span><span class="s5">id</span><span class="s7">}</span><span class="s1">"&gt;&lt;/div&gt;`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>contentDiv</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">sectionContent</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">});</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> buildPVD</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> container </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content-pvd'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> grid </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>grid</span><span class="s7">.</span><span class="s1">className </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'grid md:grid-cols-3 gap-6'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>strategyData</span><span class="s7">.</span><span class="s1">pvd</span><span class="s7">.</span><span class="s1">items</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">item </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>grid</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">+=</span><span class="s1"> </span><span class="s8">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="content-card p-6"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="inline-block px-3 py-1 text-sm font-semibold rounded-full mb-3 </span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">color</span><span class="s7">}</span><span class="s1">"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">title</span><span class="s7">}</span><span class="s1">&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-700"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">content</span><span class="s7">}</span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>container</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">grid</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> buildAudiencia</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> container </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content-audiencia'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> grid </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>grid</span><span class="s7">.</span><span class="s1">className </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'grid md:grid-cols-3 gap-6'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>strategyData</span><span class="s7">.</span><span class="s1">audiencia</span><span class="s7">.</span><span class="s1">items</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">item </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>grid</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">+=</span><span class="s1"> </span><span class="s8">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="content-card p-6 text-center"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="text-4xl mb-4"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">icon</span><span class="s7">}</span><span class="s1">&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl font-bold mb-2 text-[#3D405B]"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">title</span><span class="s7">}</span><span class="s1">&lt;/h3&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-600"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">content</span><span class="s7">}</span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>container</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">grid</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> buildMensajes</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                 </span></span><span class="s11">const</span><span class="s1"> container </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content-mensajes'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                 </span></span><span class="s11">const</span><span class="s1"> grid </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                 </span>grid</span><span class="s7">.</span><span class="s1">className </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'grid md:grid-cols-2 gap-6'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                 </span>strategyData</span><span class="s7">.</span><span class="s1">mensajes</span><span class="s7">.</span><span class="s1">items</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">item </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>grid</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">+=</span><span class="s1"> </span><span class="s8">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="content-card p-6"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 class="font-bold text-lg mb-2 text-[#81B29A]"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">title</span><span class="s7">}</span><span class="s1">&lt;/h3&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-700"&gt;"</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">content</span><span class="s7">}</span><span class="s1">"&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                 </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                 </span>container</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">grid</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> buildCanales</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> container </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content-canales'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> grid </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                </span>grid</span><span class="s7">.</span><span class="s5">className </span><span class="s7">=</span><span class="s5"> </span><span class="s1">'grid md:grid-cols-2 lg:grid-cols-4 gap-6'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>strategyData</span><span class="s7">.</span><span class="s1">canales</span><span class="s7">.</span><span class="s1">items</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">item </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>grid</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">+=</span><span class="s1"> </span><span class="s8">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="content-card p-6"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex items-center mb-3"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="text-2xl mr-3"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">icon</span><span class="s7">}</span><span class="s1">&lt;/span&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-xl font-bold text-[#3D405B]"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">name</span><span class="s7">}</span><span class="s1">&lt;/h3&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span class="inline-block bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">priority</span><span class="s7">}</span><span class="s1">&lt;/span&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-600 mt-3"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">usage</span><span class="s7">}</span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>container</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">grid</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> buildContenido</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> container </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content-contenido'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> filterContainer </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>filterContainer</span><span class="s7">.</span><span class="s1">className </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'flex flex-wrap gap-2 mb-8'</span><span class="s7">;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>strategyData</span><span class="s7">.</span><span class="s1">contenido</span><span class="s7">.</span><span class="s1">filters</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">filter </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> button </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'button'</span><span class="s7">);</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                    </span>button</span><span class="s7">.</span><span class="s5">className </span><span class="s7">=</span><span class="s5"> </span><span class="s1">'filter-btn px-4 py-2 rounded-full font-medium bg-white border border-gray-300'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> </span><span class="s7">(</span><span class="s1">filter </span><span class="s7">===</span><span class="s1"> </span><span class="s8">'Todos'</span><span class="s7">)</span><span class="s1"> button</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">add</span><span class="s7">(</span><span class="s8">'active'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>button</span><span class="s7">.</span><span class="s1">textContent </span><span class="s7">=</span><span class="s1"> filter</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>button</span><span class="s7">.</span><span class="s1">dataset</span><span class="s7">.</span><span class="s1">filter </span><span class="s7">=</span><span class="s1"> filter</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>filterContainer</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">button</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> grid </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>grid</span><span class="s7">.</span><span class="s1">id </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'contenido-grid'</span><span class="s7">;</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                </span>grid</span><span class="s7">.</span><span class="s5">className </span><span class="s7">=</span><span class="s5"> </span><span class="s1">'grid md:grid-cols-2 lg:grid-cols-3 gap-6'</span><span class="s7">;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>container</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">filterContainer</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>container</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">grid</span><span class="s7">);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">function</span><span class="s1"> renderContent</span><span class="s7">(</span><span class="s1">filter </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'Todos'</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>grid</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">=</span><span class="s1"> </span><span class="s8">''</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> items </span><span class="s7">=</span><span class="s1"> filter </span><span class="s7">===</span><span class="s1"> </span><span class="s8">'Todos'</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">?</span><span class="s1"> strategyData</span><span class="s7">.</span><span class="s1">contenido</span><span class="s7">.</span><span class="s1">items<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">:</span><span class="s1"> strategyData</span><span class="s7">.</span><span class="s1">contenido</span><span class="s7">.</span><span class="s1">items</span><span class="s7">.</span><span class="s1">filter</span><span class="s7">(</span><span class="s1">i </span><span class="s7">=&gt;</span><span class="s1"> i</span><span class="s7">.</span><span class="s1">type </span><span class="s7">===</span><span class="s1"> filter</span><span class="s7">);</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>items</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">item </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">const</span><span class="s1"> card </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>card</span><span class="s7">.</span><span class="s1">className </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'content-card p-6'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>card</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">=</span><span class="s1"> </span><span class="s8">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">type</span><span class="s7">}</span><span class="s1">&lt;/span&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 class="font-bold text-lg my-2 text-[#3D405B]"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">title</span><span class="s7">}</span><span class="s1">&lt;/h3&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-600"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">desc</span><span class="s7">}</span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>grid</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">card</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>filterContainer</span><span class="s7">.</span><span class="s1">addEventListener</span><span class="s7">(</span><span class="s8">'click'</span><span class="s7">,</span><span class="s1"> e </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s7">(</span><span class="s1">e</span><span class="s7">.</span><span class="s1">target</span><span class="s7">.</span><span class="s1">tagName </span><span class="s7">===</span><span class="s1"> </span><span class="s8">'BUTTON'</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>document</span><span class="s7">.</span><span class="s1">querySelectorAll</span><span class="s7">(</span><span class="s8">'.filter-btn'</span><span class="s7">).</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">b </span><span class="s7">=&gt;</span><span class="s1"> b</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">remove</span><span class="s7">(</span><span class="s8">'active'</span><span class="s7">));</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>e</span><span class="s7">.</span><span class="s1">target</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">add</span><span class="s7">(</span><span class="s8">'active'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>renderContent</span><span class="s7">(</span><span class="s1">e</span><span class="s7">.</span><span class="s1">target</span><span class="s7">.</span><span class="s1">dataset</span><span class="s7">.</span><span class="s1">filter</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>renderContent</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> buildTono</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> container </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content-tono'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> html </span><span class="s7">=</span><span class="s1"> </span><span class="s8">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="grid md:grid-cols-2 gap-8"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl font-bold mb-4 text-[#3D405B]"&gt;Adjetivos Clave&lt;/h3&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex flex-wrap gap-3"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s7">${</span><span class="s5">strategyData</span><span class="s7">.</span><span class="s5">tono</span><span class="s7">.</span><span class="s5">adjectives</span><span class="s7">.</span><span class="s5">map</span><span class="s7">(</span><span class="s5">adj </span><span class="s7">=&gt;</span><span class="s5"> </span><span class="s1">`&lt;span class="bg-yellow-100 text-yellow-800 font-medium px-4 py-2 rounded-full"&gt;</span><span class="s7">${</span><span class="s5">adj</span><span class="s7">}</span><span class="s1">&lt;/span&gt;`</span><span class="s7">).</span><span class="s5">join</span><span class="s7">(</span><span class="s1">''</span><span class="s7">)}</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl font-bold mb-4 text-[#3D405B]"&gt;Pilares del Estilo&lt;/h3&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="space-y-4"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s7">${</span><span class="s5">strategyData</span><span class="s7">.</span><span class="s5">tono</span><span class="s7">.</span><span class="s5">style</span><span class="s7">.</span><span class="s5">map</span><span class="s7">(</span><span class="s5">s </span><span class="s7">=&gt;</span><span class="s5"> </span><span class="s1">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;div class="p-4 bg-gray-50 rounded-lg"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;h4 class="font-bold text-gray-800"&gt;</span><span class="s7">${</span><span class="s5">s</span><span class="s7">.</span><span class="s5">title</span><span class="s7">}</span><span class="s1">&lt;/h4&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;p class="text-gray-600"&gt;</span><span class="s7">${</span><span class="s5">s</span><span class="s7">.</span><span class="s5">desc</span><span class="s7">}</span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>`</span><span class="s7">).</span><span class="s5">join</span><span class="s7">(</span><span class="s1">''</span><span class="s7">)}</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>container</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">=</span><span class="s1"> html</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> buildNetworking</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> container </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content-networking'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> list </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>list</span><span class="s7">.</span><span class="s1">className </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'space-y-4'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>strategyData</span><span class="s7">.</span><span class="s1">networking</span><span class="s7">.</span><span class="s1">items</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">item </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>list</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">+=</span><span class="s1"> </span><span class="s8">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="content-card p-6 flex items-start"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span class="text-green-500 mr-4 mt-1"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/span&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;h3 class="font-bold text-lg text-[#3D405B]"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">title</span><span class="s7">}</span><span class="s1">&lt;/h3&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p class="text-gray-600"&gt;</span><span class="s7">${</span><span class="s5">item</span><span class="s7">.</span><span class="s5">desc</span><span class="s7">}</span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>container</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">list</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> buildMetricas</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> container </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content-metricas'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> grid </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>grid</span><span class="s7">.</span><span class="s1">className </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'grid md:grid-cols-2 gap-8'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>strategyData</span><span class="s7">.</span><span class="s1">metricas</span><span class="s7">.</span><span class="s1">charts</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">chart </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>grid</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">+=</span><span class="s1"> </span><span class="s8">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="content-card p-6"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl font-bold text-center mb-4 text-[#3D405B]"&gt;</span><span class="s7">${</span><span class="s5">chart</span><span class="s7">.</span><span class="s5">title</span><span class="s7">}</span><span class="s1">&lt;/h3&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="chart-container"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;canvas id="</span><span class="s7">${</span><span class="s5">chart</span><span class="s7">.</span><span class="s5">id</span><span class="s7">}</span><span class="s1">"&gt;&lt;/canvas&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>container</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">grid</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>renderCharts</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> renderCharts</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">new</span><span class="s1"> </span><span class="s12">Chart</span><span class="s7">(</span><span class="s1">document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'engagementChart'</span><span class="s7">).</span><span class="s1">getContext</span><span class="s7">(</span><span class="s8">'2d'</span><span class="s7">),</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>type</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'doughnut'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>data</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span>labels</span><span class="s7">:</span><span class="s5"> </span><span class="s7">[</span><span class="s1">'Comentarios'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Likes'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Compartidos'</span><span class="s7">,</span><span class="s5"> </span><span class="s1">'Mensajes'</span><span class="s7">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>datasets</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>label</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'Engagement'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>data</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span><span class="s13">20</span><span class="s7">,</span><span class="s1"> </span><span class="s13">45</span><span class="s7">,</span><span class="s1"> </span><span class="s13">15</span><span class="s7">,</span><span class="s1"> </span><span class="s13">20</span><span class="s7">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>backgroundColor</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span><span class="s8">'#81B29A'</span><span class="s7">,</span><span class="s1"> </span><span class="s8">'#F2CC8F'</span><span class="s7">,</span><span class="s1"> </span><span class="s8">'#E07A5F'</span><span class="s7">,</span><span class="s1"> </span><span class="s8">'#3D405B'</span><span class="s7">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>borderColor</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'#ffffff'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>borderWidth</span><span class="s7">:</span><span class="s1"> </span><span class="s13">2</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">}]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>options</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>responsive</span><span class="s7">:</span><span class="s1"> </span><span class="s11">true</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>maintainAspectRatio</span><span class="s7">:</span><span class="s1"> </span><span class="s11">false</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>plugins</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> legend</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> position</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'bottom'</span><span class="s1"> </span><span class="s7">}</span><span class="s1"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">new</span><span class="s1"> </span><span class="s12">Chart</span><span class="s7">(</span><span class="s1">document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'growthChart'</span><span class="s7">).</span><span class="s1">getContext</span><span class="s7">(</span><span class="s8">'2d'</span><span class="s7">),</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>type</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'bar'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>data</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>labels</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span><span class="s8">'T1'</span><span class="s7">,</span><span class="s1"> </span><span class="s8">'T2'</span><span class="s7">,</span><span class="s1"> </span><span class="s8">'T3'</span><span class="s7">,</span><span class="s1"> </span><span class="s8">'T4'</span><span class="s7">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>datasets</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>label</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'Nuevos Seguidores'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>data</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span><span class="s13">150</span><span class="s7">,</span><span class="s1"> </span><span class="s13">220</span><span class="s7">,</span><span class="s1"> </span><span class="s13">310</span><span class="s7">,</span><span class="s1"> </span><span class="s13">450</span><span class="s7">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>backgroundColor</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'#81B29A'</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>borderRadius</span><span class="s7">:</span><span class="s1"> </span><span class="s13">4</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">}]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>options</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>responsive</span><span class="s7">:</span><span class="s1"> </span><span class="s11">true</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>maintainAspectRatio</span><span class="s7">:</span><span class="s1"> </span><span class="s11">false</span><span class="s7">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>plugins</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> legend</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> display</span><span class="s7">:</span><span class="s1"> </span><span class="s11">false</span><span class="s1"> </span><span class="s7">}</span><span class="s1"> </span><span class="s7">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>scales</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> y</span><span class="s7">:</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> beginAtZero</span><span class="s7">:</span><span class="s1"> </span><span class="s11">true</span><span class="s1"> </span><span class="s7">}</span><span class="s1"> </span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> buildRoadmap</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> container </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'content-roadmap'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> timeline </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'div'</span><span class="s7">);</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                </span>timeline</span><span class="s7">.</span><span class="s5">className </span><span class="s7">=</span><span class="s5"> </span><span class="s1">'relative border-l-2 border-[#81B29A] ml-4'</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>strategyData</span><span class="s7">.</span><span class="s1">roadmap</span><span class="s7">.</span><span class="s1">steps</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">step </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>timeline</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">+=</span><span class="s1"> </span><span class="s8">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="mb-10 ml-8"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span class="absolute flex items-center justify-center w-8 h-8 bg-[#E0EFEA] rounded-full -left-4 ring-4 ring-white"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s7">${</span><span class="s5">step</span><span class="s7">.</span><span class="s5">icon</span><span class="s7">}</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/span&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 class="flex items-center mb-1 text-lg font-semibold text-[#3D405B]"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s7">${</span><span class="s5">step</span><span class="s7">.</span><span class="s5">title</span><span class="s7">}</span><span class="s1"> &lt;span class="bg-[#81B29A] text-white text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3"&gt;</span><span class="s7">${</span><span class="s5">step</span><span class="s7">.</span><span class="s5">week</span><span class="s7">}</span><span class="s1">&lt;/span&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/h3&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;ul class="list-disc list-inside text-gray-600"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s7">${</span><span class="s5">step</span><span class="s7">.</span><span class="s5">tasks</span><span class="s7">.</span><span class="s5">map</span><span class="s7">(</span><span class="s5">task </span><span class="s7">=&gt;</span><span class="s5"> </span><span class="s1">`&lt;li&gt;</span><span class="s7">${</span><span class="s5">task</span><span class="s7">}</span><span class="s1">&lt;/li&gt;`</span><span class="s7">).</span><span class="s5">join</span><span class="s7">(</span><span class="s1">''</span><span class="s7">)}</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/ul&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>`</span><span class="s7">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>container</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">timeline</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buildPVD</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buildAudiencia</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buildMensajes</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buildCanales</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buildContenido</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buildTono</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buildNetworking</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buildMetricas</span><span class="s7">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buildRoadmap</span><span class="s7">();</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> navLinks </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">querySelectorAll</span><span class="s7">(</span><span class="s8">'.nav-link'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> sections </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">querySelectorAll</span><span class="s7">(</span><span class="s8">'main section'</span><span class="s7">);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> observer </span><span class="s7">=</span><span class="s1"> </span><span class="s11">new</span><span class="s1"> </span><span class="s12">IntersectionObserver</span><span class="s7">(</span><span class="s1">entries </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>entries</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">entry </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> </span><span class="s7">(</span><span class="s1">entry</span><span class="s7">.</span><span class="s1">isIntersecting</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>navLinks</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">link </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>link</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">toggle</span><span class="s7">(</span><span class="s8">'active'</span><span class="s7">,</span><span class="s1"> link</span><span class="s7">.</span><span class="s1">getAttribute</span><span class="s7">(</span><span class="s8">'href'</span><span class="s7">).</span><span class="s1">substring</span><span class="s7">(</span><span class="s13">1</span><span class="s7">)</span><span class="s1"> </span><span class="s7">===</span><span class="s1"> entry</span><span class="s7">.</span><span class="s1">target</span><span class="s7">.</span><span class="s1">id</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">},</span><span class="s1"> </span><span class="s7">{</span><span class="s1"> rootMargin</span><span class="s7">:</span><span class="s1"> </span><span class="s8">'-50% 0px -50% 0px'</span><span class="s1"> </span><span class="s7">});</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>sections</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">section </span><span class="s7">=&gt;</span><span class="s1"> observer</span><span class="s7">.</span><span class="s1">observe</span><span class="s7">(</span><span class="s1">section</span><span class="s7">));</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> mobileMenuBtn </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'mobile-menu-btn'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> sidebar </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'sidebar'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>mobileMenuBtn</span><span class="s7">.</span><span class="s1">addEventListener</span><span class="s7">(</span><span class="s8">'click'</span><span class="s7">,</span><span class="s1"> </span><span class="s7">()</span><span class="s1"> </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>sidebar</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">toggle</span><span class="s7">(</span><span class="s8">'-translate-x-full'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">});</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>mainNav</span><span class="s7">.</span><span class="s1">addEventListener</span><span class="s7">(</span><span class="s8">'click'</span><span class="s7">,</span><span class="s1"> </span><span class="s7">(</span><span class="s1">e</span><span class="s7">)</span><span class="s1"> </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> </span><span class="s7">(</span><span class="s1">e</span><span class="s7">.</span><span class="s1">target</span><span class="s7">.</span><span class="s1">closest</span><span class="s7">(</span><span class="s8">'a'</span><span class="s7">)</span><span class="s1"> </span><span class="s7">&amp;&amp;</span><span class="s1"> window</span><span class="s7">.</span><span class="s1">innerWidth </span><span class="s7">&lt;</span><span class="s1"> </span><span class="s13">768</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>sidebar</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">add</span><span class="s7">(</span><span class="s8">'-translate-x-full'</span><span class="s7">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">});</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">});</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
+<body class="brand-text-dark">
+
+    <div class="container mx-auto px-4 md:px-8 py-12">
+
+        <header class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-black brand-text-dark uppercase tracking-wide">WAU</h1>
+            <p class="text-xl md:text-2xl font-semibold brand-text-blue mt-2">Transformamos la forma en que las organizaciones piensan, venden y se comunican.</p>
+        </header>
+
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Un Enfoque Sistémico</h2>
+                <p class="mt-3 text-lg max-w-3xl mx-auto">Integramos tres sistemas críticos que suelen estar desalineados para potenciar los resultados. Cada parte es esencial para el todo.</p>
+            </div>
+            <div class="chart-container">
+                <canvas id="sistemasChart"></canvas>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Nuestro Método de Intervención</h2>
+                <p class="mt-3 text-lg max-w-3xl mx-auto">Un proceso claro de 12 semanas para convertir la intención en ejecución real y sostenible.</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0">
+                <div class="flex-1 text-center p-6 bg-white rounded-lg shadow-md m-2">
+                    <div class="text-3xl font-bold brand-text-blue">Fase 1</div>
+                    <div class="font-semibold mt-2">Diagnóstico y Estrategia</div>
+                    <div class="text-sm text-gray-500">(Semanas 1-2)</div>
+                </div>
+                <div class="hidden md:block text-2xl font-bold brand-text-blue mx-4">→</div>
+                <div class="flex-1 text-center p-6 bg-white rounded-lg shadow-md m-2">
+                    <div class="text-3xl font-bold brand-text-blue">Fase 2</div>
+                    <div class="font-semibold mt-2">Diseño de Procesos</div>
+                    <div class="text-sm text-gray-500">(Semanas 3-6)</div>
+                </div>
+                <div class="hidden md:block text-2xl font-bold brand-text-blue mx-4">→</div>
+                <div class="flex-1 text-center p-6 bg-white rounded-lg shadow-md m-2">
+                    <div class="text-3xl font-bold brand-text-blue">Fase 3</div>
+                    <div class="font-semibold mt-2">Ejecución Colaborativa</div>
+                    <div class="text-sm text-gray-500">(Semanas 7-10)</div>
+                </div>
+                <div class="hidden md:block text-2xl font-bold brand-text-blue mx-4">→</div>
+                <div class="flex-1 text-center p-6 bg-white rounded-lg shadow-md m-2">
+                    <div class="text-3xl font-bold brand-text-blue">Fase 4</div>
+                    <div class="font-semibold mt-2">Autonomía y Mejora</div>
+                    <div class="text-sm text-gray-500">(Semanas 11-12)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">¿Por qué WAU es Diferente?</h2>
+                 <p class="mt-3 text-lg max-w-3xl mx-auto">No solo damos recomendaciones, creamos sistemas y los implementamos contigo.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                    <div class="text-4xl mb-3">🤝</div>
+                    <h3 class="text-xl font-bold mb-2">Implementación Real</h3>
+                    <p>No dejamos una PPT. Bajamos al terreno y ejecutamos con los equipos para asegurar que el cambio suceda.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                    <div class="text-4xl mb-3">🧬</div>
+                    <h3 class="text-xl font-bold mb-2">Metodología Híbrida</h3>
+                    <p>Combinamos nuestro método propio con frameworks de clase mundial (OKR, BSC, SCARF) para darte la mejor solución.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                    <div class="text-4xl mb-3">📈</div>
+                    <h3 class="text-xl font-bold mb-2">Cultura de Mejora</h3>
+                    <p>Instalamos un sistema de feedback e indicadores que le permite a tu empresa seguir creciendo sola, sin depender de nosotros.</p>
+                </div>
+            </div>
+        </section>
+
+         <section class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                     <h2 class="text-3xl md:text-4xl font-bold">Los Problemas que Resolvemos</h2>
+                     <p class="mt-3 text-lg mb-6">Ayudamos a las empresas a superar los obstáculos más comunes que frenan su crecimiento.</p>
+                     <ul class="space-y-4">
+                        <li class="flex items-center text-lg p-3 bg-red-100 rounded-md"><span class="brand-text-dark text-2xl mr-4">✗</span>Estrategias que no se ejecutan.</li>
+                        <li class="flex items-center text-lg p-3 bg-red-100 rounded-md"><span class="brand-text-dark text-2xl mr-4">✗</span>Equipos de venta sin método ni foco.</li>
+                        <li class="flex items-center text-lg p-3 bg-red-100 rounded-md"><span class="brand-text-dark text-2xl mr-4">✗</span>Procesos desordenados y sin métricas.</li>
+                        <li class="flex items-center text-lg p-3 bg-red-100 rounded-md"><span class="brand-text-dark text-2xl mr-4">✗</span>Falta de alineación y propósito compartido.</li>
+                     </ul>
+                </div>
+                <div class="brand-bg-green p-8 rounded-lg shadow-lg text-center">
+                    <h3 class="text-3xl font-bold brand-text-dark">El Resultado:</h3>
+                    <p class="mt-4 text-xl brand-text-dark font-semibold">Convertimos la intención en ejecución. Equipos alineados, ventas con método y resultados que perduran en el tiempo.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Nuestro Arsenal de Herramientas</h2>
+                <p class="mt-3 text-lg max-w-3xl mx-auto">Utilizamos una amplia gama de frameworks probados para diagnosticar, diseñar y ejecutar soluciones a medida.</p>
+            </div>
+            <div class="chart-container" style="height: 450px; max-height: 600px;">
+                <canvas id="toolsChart"></canvas>
+            </div>
+        </section>
+        
+        <footer class="text-center pt-12 border-t-2 border-gray-200">
+             <h2 class="text-3xl md:text-4xl font-bold">¿Para Quién es WAU?</h2>
+             <p class="mt-3 text-lg max-w-3xl mx-auto">Somos para empresas medianas en crecimiento que quieren profesionalizar su estrategia, ordenar sus procesos y están listas para ejecutar. No buscamos clientes que quieran un informe, buscamos socios para la acción.</p>
+             <div class="mt-8">
+                 <p class="text-4xl md:text-6xl font-black brand-text-dark uppercase tracking-wide">WAU.</p>
+                 <p class="text-2xl font-semibold brand-text-blue">We Are Unstoppable.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        function wrapText(label) {
+            const maxLength = 16;
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).length > maxLength) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            });
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            }
+            return label;
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sistemasCtx = document.getElementById('sistemasChart').getContext('2d');
+            new Chart(sistemasCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Estrategia', 'Ventas', 'Comunicación Interna'],
+                    datasets: [{
+                        label: 'Ejes de WAU',
+                        data: [33.3, 33.3, 33.3],
+                        backgroundColor: ['#118AB2', '#06D6A0', '#FFD166'],
+                        borderColor: '#f8f9fa',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: { size: 14, weight: '600' }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: { title: tooltipTitleCallback }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+
+            const toolsCtx = document.getElementById('toolsChart').getContext('2d');
+            const toolsData = {
+                labels: [
+                    'Balanced Scorecard', 'Strategy Map', 'OKRs', 'B2B Sales Playbooks', 
+                    'SCARF Model', 'Kaleidoscope', 'SIPOC', 'BPMN', 'Lean Six Sigma', 
+                    'PDCA', 'Kaizen', 'A3 Thinking', 'Ishikawa', '5 Porqués', 'KPI Tree',
+                    'Power BI', 'Google Looker Studio', 'OGSM', 'Gantt', 'RACI', 'CRM Audits', 
+                    'Buyer Personas', 'Customer Journey Maps', 'AIDA', 'eNPS', 
+                    'Organizational Network Analysis', 'Golden Circle'
+                ].map(wrapText),
+                datasets: [{
+                    label: 'Frameworks y Herramientas',
+                    data: [
+                        {x: 1, y: 8, r: 25}, {x: 3, y: 6, r: 20}, {x: 5, y: 9, r: 28}, {x: 8, y: 7, r: 30},
+                        {x: 2, y: 2, r: 26}, {x: 4, y: 4, r: 18}, {x: 6, y: 1, r: 15}, {x: 9, y: 3, r: 15},
+                        {x: 1.5, y: 4.5, r: 22}, {x: 3.5, y: 8.5, r: 16}, {x: 5.5, y: 3.5, r: 16}, {x: 7.5, y: 1.5, r: 18},
+                        {x: 9.5, y: 5.5, r: 19}, {x: 1, y: 1, r: 14}, {x: 3, y: 0.5, r: 20}, {x: 6, y: 5, r: 24},
+                        {x: 8.5, y: 9.5, r: 24}, {x: 1.2, y: 10, r: 17}, {x: 4, y: 11, r: 16}, {x: 7, y: 10.5, r: 15},
+                        {x: 2.5, y: 7.5, r: 19}, {x: 5, y: 0, r: 23}, {x: 7.5, y: 4, r: 26}, {x: 9.8, y: 1, r: 14},
+                        {x: 0.5, y: 3, r: 16}, {x: 3.5, y: 2, r: 28}, {x: 6.5, y: 8, r: 27}
+                    ],
+                    backgroundColor: [
+                        'rgba(255, 107, 107, 0.7)', 'rgba(255, 209, 102, 0.7)', 'rgba(6, 214, 160, 0.7)', 
+                        'rgba(17, 138, 178, 0.7)', 'rgba(7, 59, 76, 0.7)'
+                    ]
+                }]
+            };
+
+            new Chart(toolsCtx, {
+                type: 'bubble',
+                data: toolsData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback,
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    const originalLabel = context.chart.data.labels[context.dataIndex];
+                                    if(Array.isArray(originalLabel)) {
+                                        label += originalLabel.join(' ');
+                                    } else {
+                                        label += originalLabel;
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { display: false, grid: { display: false } },
+                        y: { display: false, grid: { display: false } }
+                    }
+                }
+            });
+
+        });
+    </script>
+
 </body>
 </html>
